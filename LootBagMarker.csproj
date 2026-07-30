@@ -94,4 +94,6 @@
     <Folder Include="Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="LootBagMarker.local.targets"
+        Condition="Exists('LootBagMarker.local.targets')" />
 </Project>

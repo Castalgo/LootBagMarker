@@ -8,11 +8,11 @@ namespace LootBagMarkerMod.Config
     public static class ModEinstellungen
     {
         public static bool LootbagMarkerAktiv = false;
-        public static float MarkerScanIntervall = 2.0f; // NEU: Unser Standardwert
+        public static float MarkerScanIntervall = 2.0f; // default value
 
         public static void Laden(string saveDir)
         {
-            string configPfad = Path.Combine(saveDir, "ModConfig.json");
+            string configPfad = Path.Combine(saveDir, "LootBagMarker_Config.json");
             if (File.Exists(configPfad))
             {
                 try
@@ -22,7 +22,7 @@ namespace LootBagMarkerMod.Config
                     if (config != null)
                     {
                         LootbagMarkerAktiv = config.LootbagMarkerAktiv;
-                        MarkerScanIntervall = config.MarkerScanIntervall; // NEU
+                        MarkerScanIntervall = config.MarkerScanIntervall;
                     }
                 }
                 catch (Exception e)
@@ -34,7 +34,7 @@ namespace LootBagMarkerMod.Config
             {
                 // Standardwerte, falls noch keine Config existiert
                 LootbagMarkerAktiv = false;
-                MarkerScanIntervall = 2.0f; // NEU
+                MarkerScanIntervall = 2.0f;
             }
         }
 
@@ -43,14 +43,13 @@ namespace LootBagMarkerMod.Config
             string saveDir = GameIO.GetSaveGameDir();
             if (string.IsNullOrEmpty(saveDir)) return;
 
-            string configPfad = Path.Combine(saveDir, "ModConfig.json");
+            string configPfad = Path.Combine(saveDir, "LootBagMarker_Config.json");
             try
             {
                 var config = new ConfigDaten
                 {
-                    // alphabetische Reihenfolge der Eigenschaften
                     LootbagMarkerAktiv = LootbagMarkerAktiv,
-                    MarkerScanIntervall = MarkerScanIntervall // NEU
+                    MarkerScanIntervall = MarkerScanIntervall
                 };
                 string json = JsonConvert.SerializeObject(config, Formatting.Indented);
                 File.WriteAllText(configPfad, json);
@@ -64,7 +63,7 @@ namespace LootBagMarkerMod.Config
         private class ConfigDaten
         {
             public bool LootbagMarkerAktiv { get; set; } = false;
-            public float MarkerScanIntervall { get; set; } = 2.0f; // NEU
+            public float MarkerScanIntervall { get; set; } = 2.0f;
         }
     }
 }

@@ -11,8 +11,8 @@ namespace LootBagMarkerMod.LootBagMarker
         // Unser Gedächtnis: Entity-ID -> UI-Marker
         private static Dictionary<int, NavObject> aktiveLootbagMarker = new Dictionary<int, NavObject>();
 
+        // Zählt die Sekunden seit dem letzten Scan
         private static float checkTimer = 0f;
-        // Die Konstante CHECK_INTERVALL wurde hier gelöscht!
 
         public static void SetzeModus(bool aktiv)
         {
@@ -27,7 +27,7 @@ namespace LootBagMarkerMod.LootBagMarker
             if (IstAktiv)
             {
                 Log.Out("[LootBagMarker] AKTIVIERT.");
-                // NEU: Greift auf die Config zu
+                // Timer auf das Maximum setzen, damit sofort beim Start ein initialer Scan ausgeführt wird
                 checkTimer = ModEinstellungen.MarkerScanIntervall;
             }
             else
@@ -44,7 +44,7 @@ namespace LootBagMarkerMod.LootBagMarker
             if (IstAktiv)
             {
                 Log.Out("[LootBagMarker] Lootbag-Marker aus lokaler Config wiederhergestellt (AKTIV).");
-                // NEU: Greift auf die Config zu
+                // Timer auf das Maximum setzen, damit sofort beim Beitritt der Welt gescannt wird
                 checkTimer = ModEinstellungen.MarkerScanIntervall;
             }
         }
@@ -56,10 +56,9 @@ namespace LootBagMarkerMod.LootBagMarker
             if (GameManager.Instance == null || GameManager.Instance.World == null) return;
 
             checkTimer += Time.deltaTime;
-            // NEU: Prüft gegen die dynamische Config-Variable
             if (checkTimer >= ModEinstellungen.MarkerScanIntervall)
             {
-                checkTimer = 0f;
+                checkTimer = 0f; // Timer für den nächsten Durchlauf zurücksetzen
                 ScanLootbags();
             }
         }

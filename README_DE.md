@@ -6,8 +6,11 @@
 ## Über diese Mod
 Die Mod sucht Loot Bags in deiner Umgebung und markiert diese wie ein Abwurf aus der Luft.
 
+
 ## Installation
 Platziere den Ordner `LootBagMarker` einfach in deinem Mod-Verzeichnis unter `C:\Users\DeinBenutzername\AppData\Roaming\7DaysToDie\Mods\`.
+
+Die Mod ist rein client seitig und braucht nicht auf dem Server installiert werden. Diese Mod unterstütz kein EAC, d. h. der Server muss EAC abgeschaltet haben.
 
 ---
 

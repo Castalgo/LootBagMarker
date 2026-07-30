@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 using LootBagMarkerMod.Config;
 using LootBagMarkerMod.LootBagMarker;
@@ -58,7 +59,7 @@ namespace LootBagMarkerMod.Commands
         // Die ausgelagerte DAU-Sicherheitsprüfung für den Timer
         private void CmdTimer(List<string> _params)
         {
-            if (_params.Count < 2 || !float.TryParse(_params[1], out float neuerTimer))
+            if (_params.Count < 2 || !float.TryParse(_params[1], NumberStyles.Float, CultureInfo.InvariantCulture, out float neuerTimer))
             {
                 Log.Warning($"[LootBagMarker] Aktuelles Intervall: {ModEinstellungen.MarkerScanIntervall}s. Bitte nutze 'lbm timer <Zahl>', z.B. 'lbm timer 1.5'.");
                 return;
