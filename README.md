@@ -9,6 +9,8 @@ This mod searches for loot bags in your vicinity and marks them on your compass/
 ## Installation
 Simply place the `LootBagMarker` folder into your mod directory at `C:\Users\YourUsername\AppData\Roaming\7DaysToDie\Mods\`.
 
+The mod is purely client-side and does not need to be installed on the server. This mod does not support EAC, meaning the server must have EAC disabled.
+
 ---
 
 ## Console Commands

@@ -7,7 +7,7 @@ namespace LootBagMarkerMod.Config
 {
     public static class ModEinstellungen
     {
-        public static bool LootbagMarkerAktiv = false;
+        public static bool LootbagMarkerAktiv = true;
         public static float MarkerScanIntervall = 2.0f; // default value
 
         public static void Laden(string saveDir)
@@ -33,7 +33,7 @@ namespace LootBagMarkerMod.Config
             else
             {
                 // Standardwerte, falls noch keine Config existiert
-                LootbagMarkerAktiv = false;
+                LootbagMarkerAktiv = true;
                 MarkerScanIntervall = 2.0f;
             }
         }
@@ -62,7 +62,7 @@ namespace LootBagMarkerMod.Config
 
         private class ConfigDaten
         {
-            public bool LootbagMarkerAktiv { get; set; } = false;
+            public bool LootbagMarkerAktiv { get; set; } = true;
             public float MarkerScanIntervall { get; set; } = 2.0f;
         }
     }
