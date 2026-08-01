@@ -19,3 +19,6 @@ The mod includes custom commands for the in-game console. You can use either the
 ### User Commands
 *   `lbm <on/off>` (or `true/false`): Enables or disables the markers provided by the mod.
 *   `lbm timer <seconds>`: Adjusts the scan interval of the radar (allowed values are 0.1 to 5.0). Example: `lbm timer 1.5`.
+
+---
+This mod uses Harmony by Andreas Pardeike, licensed under the MIT License. Many thanks for his work.

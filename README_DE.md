@@ -20,3 +20,6 @@ Die Mod bringt eigene Befehle für die Ingame-Konsole mit. Du kannst als Präfix
 ### User-Befehle
 *   `lbm <on/off>` (oder `true/false`): Aktiviert oder deaktiviert die Marker der Mod.
 *   `lbm timer <Sekunden>`: Passt das Scan-Intervall des Radars an (erlaubt sind Werte von 0.1 bis 5.0). Beispiel: `lbm timer 1.5`.
+
+---
+This mod uses Harmony by Andreas Pardeike, licensed under the MIT License. Many thanks for his work.
