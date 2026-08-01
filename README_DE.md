@@ -23,4 +23,13 @@ Die Mod bringt eigene Befehle für die Ingame-Konsole mit. Du kannst als Präfix
 *   `lbm timer <Sekunden>`: Passt das Scan-Intervall des Radars an (erlaubt sind Werte von 0.1 bis 5.0).[cite: 4] Beispiel: `lbm timer 1.5`.
 
 ---
+
+### Bekannte Probleme
+Es wird oben im Kompass ein LootBags angezeigt, aber um euch herum ist nirgends ein Marker zu sehen?
+Pausiert das Spiel, drückt F1, gebt "le" ein und drückt ENTER.
+Nun sollte eine Liste an Objekten auftauchen. Schaut dort nach den Y-Koordinaten des LootBags. Sehr wahrscheinlich ist er unter die Karte gefallen (bzw. fällt noch).
+Ihr könnt mit "kill <ID des Lootbags>" und ENTER den Lootbag manuell löschen. Schließt die Konsole dann mit "F1" wieder. Nach dem Beenden der Pause sollte der Marker verschwinden.
+
+---
+
 This mod uses Harmony by Andreas Pardeike, licensed under the MIT License. Many thanks for his work.

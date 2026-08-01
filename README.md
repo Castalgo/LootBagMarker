@@ -23,4 +23,13 @@ The mod comes with its own commands for the in-game console. You can use either 
 *   `lbm timer <seconds>`: Adjusts the scan interval of the radar (allowed values are from 0.1 to 5.0). Example: `lbm timer 1.5`.
 
 ---
+
+### Known Issues
+Is a LootBag icon showing up on your compass, but there is no marker visible anywhere around you?
+Pause the game, press F1, type "le", and press ENTER.
+A list of objects should now appear. Look for the LootBag's Y-coordinates in the list. It has most likely fallen through the map (and is still falling).
+You can manually delete the LootBag by typing "kill <LootBag ID>" and pressing ENTER. Then close the console by pressing F1 again. The marker should disappear once you unpause the game.
+
+---
+
 This mod uses Harmony by Andreas Pardeike, licensed under the MIT License. Many thanks for his work.
